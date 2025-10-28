@@ -53,6 +53,11 @@ export const getMyPatientProfile = async () => {
   return response.data;
 };
 
+export const getPatient = async (patientId) => {
+  const response = await api.get(`/patients/${patientId}`);
+  return response.data;
+};
+
 export const updatePatient = async (patientId, data) => {
   const response = await api.put(`/patients/${patientId}`, data);
   return response.data;
@@ -72,6 +77,11 @@ export const getDoctor = async (doctorId) => {
 
 export const getMyDoctorProfile = async () => {
   const response = await api.get('/doctors/me');
+  return response.data;
+};
+
+export const updateDoctor = async (doctorId, data) => {
+  const response = await api.put(`/doctors/${doctorId}`, data);
   return response.data;
 };
 

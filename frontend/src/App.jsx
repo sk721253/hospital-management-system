@@ -4,8 +4,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Doctors from "./pages/Doctors";
-import Appointments from "./pages/Appointments";
+import AppointmentsList from "./pages/AppointmentsList";
 import NewAppointment from "./pages/NewAppointment";
+import AppointmentDetails from "./pages/AppointmentDetails";
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth();
@@ -48,7 +49,7 @@ function App() {
             path="/appointments"
             element={
               <PrivateRoute>
-                <Appointments />
+                <AppointmentsList />
               </PrivateRoute>
             }
           />
